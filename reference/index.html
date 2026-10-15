@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Honest Million — Clear Financial Planning for Aarav</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #FAF8F5;
+            color: #18181B;
+        }
+
+        .font-serif-editorial {
+            font-family: 'Fraunces', serif;
+        }
+
+        input[type="range"] {
+            accent-color: #0F766E;
+        }
+
+        .card-transition {
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+    </style>
+</head>
+
+<body class="min-h-screen flex flex-col selection:bg-teal-100 selection:text-teal-900">
+
+    <!-- Top Navigation & Persona Context Bar -->
+    <header class="sticky top-0 z-30 bg-[#FAF8F5]/95 backdrop-blur border-b border-stone-200">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 py-3.5 flex flex-wrap items-center justify-between gap-4">
+            <div class="flex items-center gap-3">
+                <div
+                    class="w-9 h-9 rounded-xl bg-teal-800 text-amber-50 flex items-center justify-center font-serif-editorial font-bold text-lg shadow-sm">
+                    1M
+                </div>
+                <div>
+                    <span class="font-serif-editorial font-bold text-lg tracking-tight text-stone-900">The Honest
+                        Million</span>
+                    <span
+                        class="hidden sm:inline-block ml-2 text-xs px-2.5 py-0.5 rounded-full bg-stone-200/80 text-stone-700 font-medium">
+                        No charts. No hype. Just a plan.
+                    </span>
+                </div>
+            </div>
+
+            <!-- Persona Pill -->
+            <div
+                class="flex items-center gap-3 bg-white border border-stone-200 rounded-full px-3.5 py-1.5 shadow-2xs text-xs sm:text-sm">
+                <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                <span class="font-medium text-stone-800">Aarav, 19</span>
+                <span class="text-stone-400">|</span>
+                <span class="text-stone-600">Income: <strong class="text-stone-900">₹8,000/mo</strong></span>
+                <span class="text-stone-400">|</span>
+                <span class="text-teal-800 font-semibold">Goal: ₹10,00,000</span>
+            </div>
+        </div>
+
+        <!-- Step Navigation Tabs -->
+        <div
+            class="max-w-5xl mx-auto px-4 sm:px-6 flex overflow-x-auto no-scrollbar border-t border-stone-200/60 bg-stone-100/60">
+            <button onclick="switchTab(1)" id="tab-btn-1"
+                class="tab-btn py-3 px-4 text-sm font-semibold border-b-2 border-teal-800 text-teal-900 whitespace-nowrap flex items-center gap-2">
+                <span
+                    class="w-5 h-5 rounded-full bg-teal-800 text-white text-xs flex items-center justify-center">1</span>
+                1. Make Sense of Options
+            </button>
+            <button onclick="switchTab(2)" id="tab-btn-2"
+                class="tab-btn py-3 px-4 text-sm font-medium border-b-2 border-transparent text-stone-500 hover:text-stone-800 whitespace-nowrap flex items-center gap-2">
+                <span
+                    class="w-5 h-5 rounded-full bg-stone-300 text-stone-700 text-xs flex items-center justify-center">2</span>
+                2. Build Your Mix
+            </button>
+            <button onclick="switchTab(3)" id="tab-btn-3"
+                class="tab-btn py-3 px-4 text-sm font-medium border-b-2 border-transparent text-stone-500 hover:text-stone-800 whitespace-nowrap flex items-center gap-2">
+                <span
+                    class="w-5 h-5 rounded-full bg-stone-300 text-stone-700 text-xs flex items-center justify-center">3</span>
+                3. Survive a Bad Year
+            </button>
+            <button onclick="switchTab(4)" id="tab-btn-4"
+                class="tab-btn py-3 px-4 text-sm font-medium border-b-2 border-transparent text-stone-500 hover:text-stone-800 whitespace-nowrap flex items-center gap-2">
+                <span
+                    class="w-5 h-5 rounded-full bg-stone-300 text-stone-700 text-xs flex items-center justify-center">4</span>
+                4. Calm Monthly Check-In
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="flex-1 max-w-5xl w-full mx-auto px-4 sm:px-6 py-8">
+
+        <!-- ========================================== -->
+        <!-- STEP 1: MAKE SENSE OF THE OPTIONS          -->
+        <!-- ========================================== -->
+        <section id="step-1" class="space-y-6">
+            <div class="bg-white border border-stone-200 rounded-2xl p-6 sm:p-8 shadow-2xs">
+                <div
+                    class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-stone-100">
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-wider text-teal-700">Step 1 • Cut Through The
+                            Noise</span>
+                        <h1 class="font-serif-editorial text-2xl sm:text-3xl font-bold text-stone-900 mt-1">
+                            Everyone is shouting advice. Here is what actually matters at 19.
+                        </h1>
+                        <p class="text-stone-600 mt-2 text-sm sm:text-base max-w-2xl">
+                            Your friends talk about crypto and quick tips; your family talks about FDs and gold. Let's
+                            strip away the jargon and evaluate every option on three honest metrics: <strong>Can it lose
+                                money?</strong>, <strong>Is your cash locked up?</strong>, and <strong>Does it beat
+                                inflation?</strong>
+                        </p>
+                    </div>
+
+                    <!-- The "Show Too Much vs Decide For Him" Resolver Toggle -->
+                    <div
+                        class="bg-stone-50 border border-stone-200 rounded-xl p-4 shrink-0 flex flex-col justify-between">
+                        <div class="flex items-center justify-between gap-3">
+                            <span class="text-xs font-semibold text-stone-700">Filter for Aarav's ₹8k/mo</span>
+                            <button id="filter-toggle" onclick="toggleAaravFilter()"
+                                class="relative inline-flex h-6 w-11 items-center rounded-full bg-teal-700 transition-colors">
+                                <span id="filter-knob"
+                                    class="inline-block h-4 w-4 transform rounded-full bg-white transition-transform translate-x-6"></span>
+                            </button>
+                        </div>
+                        <p id="filter-status-text" class="text-xs text-teal-800 font-medium mt-2 max-w-[210px]">
+                            Showing all 6 options, with the 3 distractions dimmed & explained.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Option Cards Grid -->
+                <div id="options-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
+                    <!-- Populated dynamically via JS -->
+                </div>
+
+                <div
+                    class="mt-8 pt-6 border-t border-stone-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <div class="text-sm text-stone-600">
+                        <strong class="text-stone-900">The Honest Takeaway:</strong> At 19, you only need <strong>3
+                            building blocks</strong>: an Emergency Cushion (Savings), a Short-Term Shield (FD/Debt), and
+                        a Millionaire Engine (Nifty 50 Index SIP).
+                    </div>
+                    <button onclick="switchTab(2)"
+                        class="w-full sm:w-auto px-6 py-3 rounded-xl bg-teal-800 hover:bg-teal-900 text-white font-semibold text-sm transition shadow-sm shrink-0">
+                        Turn These 3 Into My Plan →
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- STEP 2: NARROW DOWN TO A PLAN (MIXER)      -->
+        <!-- ========================================== -->
+        <section id="step-2" class="hidden space-y-6">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+
+                <!-- Left Column: Interactive Sliders (7 cols) -->
+                <div class="lg:col-span-7 bg-white border border-stone-200 rounded-2xl p-6 sm:p-8 shadow-2xs space-y-6">
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-wider text-teal-700">Step 2 • Narrow Down To A
+                            Plan</span>
+                        <h2 class="font-serif-editorial text-2xl sm:text-3xl font-bold text-stone-900 mt-1">
+                            Split your ₹8,000/month realistically.
+                        </h2>
+                        <p class="text-stone-600 text-sm mt-1">
+                            A plan you can't stick to is useless. First, keep enough for college life and snacks—then
+                            split the rest across your 3 honest buckets.
+                        </p>
+                    </div>
+
+                    <!-- Preset Quick Buttons -->
+                    <div class="flex flex-wrap gap-2 pt-1">
+                        <span class="text-xs text-stone-500 self-center mr-1">Try a preset:</span>
+                        <button onclick="applyPreset(3000, 500, 1000, 3500)"
+                            class="text-xs px-3 py-1.5 rounded-lg border border-teal-200 bg-teal-50 text-teal-900 font-semibold hover:bg-teal-100">
+                            Recommended Balanced (₹5k/mo invested)
+                        </button>
+                        <button onclick="applyPreset(4000, 2500, 1000, 500)"
+                            class="text-xs px-3 py-1.5 rounded-lg border border-stone-200 bg-stone-50 text-stone-700 hover:bg-stone-100">
+                            Too Scared of Losses (Mostly Safe)
+                        </button>
+                        <button onclick="applyPreset(2500, 500, 500, 4500)"
+                            class="text-xs px-3 py-1.5 rounded-lg border border-stone-200 bg-stone-50 text-stone-700 hover:bg-stone-100">
+                            Aggressive Saver (₹5.5k/mo invested)
+                        </button>
+                    </div>
+
+                    <!-- Sliders Container -->
+                    <div class="space-y-5 pt-2">
+
+                        <!-- Slider 0: College Life & Personal Spending -->
+                        <div class="p-4 rounded-xl bg-stone-50 border border-stone-200">
+                            <div class="flex justify-between items-center mb-1">
+                                <div>
+                                    <span class="text-sm font-bold text-stone-800">0. College Life, Commute & Fun</span>
+                                    <span
+                                        class="ml-2 text-xs px-2 py-0.5 rounded bg-stone-200 text-stone-700">Guilt-free
+                                        spending</span>
+                                </div>
+                                <span id="val-spend" class="text-base font-bold text-stone-900">₹3,000 / mo</span>
+                            </div>
+                            <p class="text-xs text-stone-500 mb-3">If you starve your social life to invest, you'll quit
+                                your plan in month 3.</p>
+                            <input id="slider-spend" type="range" min="1000" max="6000" step="250" value="3000"
+                                oninput="updatePlanMath()" class="w-full cursor-pointer" />
+                        </div>
+
+                        <!-- Remaining Investable Banner -->
+                        <div
+                            class="flex items-center justify-between px-4 py-2.5 rounded-lg bg-teal-900 text-amber-50 text-sm">
+                            <span>Monthly Money Working For Your Million:</span>
+                            <strong id="val-total-invest" class="text-base">₹5,000 / month</strong>
+                        </div>
+
+                        <!-- Bucket 1: Safety Buffer -->
+                        <div class="p-4 rounded-xl border border-stone-200 bg-white">
+                            <div class="flex justify-between items-center mb-1">
+                                <div>
+                                    <span class="text-sm font-bold text-stone-900">1. Emergency Cushion (Savings /
+                                        Liquid)</span>
+                                    <span
+                                        class="ml-2 text-xs px-2 py-0.5 rounded bg-blue-50 text-blue-800 font-medium">~4%
+                                        return • Instant access</span>
+                                </div>
+                                <span id="val-safe" class="text-base font-bold text-blue-900">₹500 / mo</span>
+                            </div>
+                            <p class="text-xs text-stone-500 mb-3">For sudden phone repairs or medical needs so you
+                                never have to break your investments early.</p>
+                            <input id="slider-safe" type="range" min="0" max="5000" step="250" value="500"
+                                oninput="rebalanceSliders('safe')" class="w-full cursor-pointer" />
+                        </div>
+
+                        <!-- Bucket 2: Medium-Term Stability -->
+                        <div class="p-4 rounded-xl border border-stone-200 bg-white">
+                            <div class="flex justify-between items-center mb-1">
+                                <div>
+                                    <span class="text-sm font-bold text-stone-900">2. Stability Anchor (FD /
+                                        Gold)</span>
+                                    <span
+                                        class="ml-2 text-xs px-2 py-0.5 rounded bg-amber-50 text-amber-800 font-medium">~7%
+                                        return • Steady</span>
+                                </div>
+                                <span id="val-mid" class="text-base font-bold text-amber-900">₹1,000 / mo</span>
+                            </div>
+                            <p class="text-xs text-stone-500 mb-3">Grows faster than a bank account and cushions your
+                                mood when the stock market has a bad year.</p>
+                            <input id="slider-mid" type="range" min="0" max="5000" step="250" value="1000"
+                                oninput="rebalanceSliders('mid')" class="w-full cursor-pointer" />
+                        </div>
+
+                        <!-- Bucket 3: The Millionaire Engine -->
+                        <div class="p-4 rounded-xl border-2 border-teal-700 bg-teal-50/30">
+                            <div class="flex justify-between items-center mb-1">
+                                <div>
+                                    <span class="text-sm font-bold text-teal-950">3. The Millionaire Engine (Nifty 50
+                                        Index SIP)</span>
+                                    <span
+                                        class="ml-2 text-xs px-2 py-0.5 rounded bg-teal-100 text-teal-900 font-semibold">~12%
+                                        hist. avg • Drops in bad years</span>
+                                </div>
+                                <span id="val-growth" class="text-base font-bold text-teal-900">₹3,500 / mo</span>
+                            </div>
+                            <p class="text-xs text-stone-600 mb-3">Automatically buys tiny slices of India's 50 biggest
+                                companies. Volatile month-to-month, powerful over 7+ years.</p>
+                            <input id="slider-growth" type="range" min="0" max="5000" step="250" value="3500"
+                                oninput="rebalanceSliders('growth')" class="w-full cursor-pointer" />
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Right Column: Live Honest Outcome Card (5 cols) -->
+                <div
+                    class="lg:col-span-5 flex flex-col justify-between bg-stone-900 text-stone-100 rounded-2xl p-6 sm:p-8 shadow-md space-y-6">
+                    <div class="space-y-4">
+                        <span class="text-xs font-bold uppercase tracking-wider text-amber-400">Live Goal Reality
+                            Check</span>
+
+                        <div class="p-5 rounded-xl bg-stone-800/90 border border-stone-700">
+                            <p class="text-xs text-stone-400 uppercase tracking-wide">You hit ₹10,00,000 (1 Million INR)
+                                in</p>
+                            <div id="goal-time-headline"
+                                class="font-serif-editorial text-3xl sm:text-4xl font-bold text-white mt-1">
+                                9 Years, 2 Months
+                            </div>
+                            <p id="goal-age-subtext" class="text-sm text-teal-300 font-medium mt-1">
+                                Target Date: December 2035 (When you are 28)
+                            </p>
+                        </div>
+
+                        <!-- Visual Bar Comparison: Your Plan vs Bank Account -->
+                        <div class="space-y-3 pt-2">
+                            <p class="text-xs font-semibold uppercase tracking-wider text-stone-400">Why Your Mix
+                                Matters</p>
+
+                            <div>
+                                <div class="flex justify-between text-xs mb-1">
+                                    <span class="text-teal-300 font-medium">Your Chosen Mix (<span
+                                            id="blended-rate-text">10.2%</span> avg/yr)</span>
+                                    <span id="bar-your-years" class="font-bold">9.2 yrs</span>
+                                </div>
+                                <div class="w-full h-3 bg-stone-800 rounded-full overflow-hidden">
+                                    <div id="bar-your-width"
+                                        class="h-full bg-teal-400 rounded-full transition-all duration-300"
+                                        style="width: 55%"></div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="flex justify-between text-xs mb-1">
+                                    <span class="text-stone-400">If left in a Savings Account (3.5%/yr)</span>
+                                    <span id="bar-bank-years" class="text-stone-400">13.6 yrs</span>
+                                </div>
+                                <div class="w-full h-3 bg-stone-800 rounded-full overflow-hidden">
+                                    <div id="bar-bank-width"
+                                        class="h-full bg-stone-600 rounded-full transition-all duration-300"
+                                        style="width: 85%"></div>
+                                </div>
+                            </div>
+
+                            <p id="time-saved-callout"
+                                class="text-xs text-stone-300 bg-stone-800/60 border border-stone-700/80 rounded-lg p-3 leading-relaxed">
+                                By putting ₹3,500/mo into the Index SIP instead of leaving everything in the bank, you
+                                reach ₹10 Lakhs <strong>4 years and 5 months earlier</strong>—and ₹4.5 Lakhs of your
+                                million comes purely from compounding!
+                            </p>
+                        </div>
+
+                        <!-- Honest Trade-off Warning Box -->
+                        <div
+                            class="p-4 rounded-xl bg-amber-500/10 border border-amber-400/30 text-amber-200 text-xs space-y-1.5">
+                            <div class="font-bold text-amber-300 flex items-center gap-1.5">
+                                <span>⚠️</span> The Honest Catch With Your Mix:
+                            </div>
+                            <p id="honest-catch-text" class="leading-relaxed">
+                                Because 70% of your savings goes into the Nifty 50 Index, in a bad market year your
+                                portfolio value can temporarily drop by <strong>₹45,000+ on paper</strong>. Are you sure
+                                you won't panic and quit?
+                            </p>
+                        </div>
+                    </div>
+
+                    <button onclick="switchTab(3)"
+                        class="w-full py-3.5 px-5 rounded-xl bg-amber-400 hover:bg-amber-300 text-stone-950 font-bold text-sm transition shadow-sm">
+                        Test This Plan Against a Market Crash →
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- STEP 3: EXPERIENCE A MARKET DECLINE        -->
+        <!-- ========================================== -->
+        <section id="step-3" class="hidden space-y-6">
+            <div class="bg-white border border-stone-200 rounded-2xl p-6 sm:p-8 shadow-2xs space-y-6">
+                <div
+                    class="flex flex-col md:flex-row md:items-center justify-between gap-4 border-b border-stone-100 pb-6">
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-wider text-rose-700">Step 3 • Feel That Not
+                            Every Year Is Good</span>
+                        <h2 class="font-serif-editorial text-2xl sm:text-3xl font-bold text-stone-900 mt-1">
+                            Fast-Forward to Year 3: The Market Just Crashed 28%.
+                        </h2>
+                        <p class="text-stone-600 text-sm mt-1 max-w-2xl">
+                            Nobody told you that some years lose money. Imagine it is <strong>October 2029</strong>. You
+                            have diligently invested for 36 months. Suddenly, scary headlines hit the news and your
+                            Index Fund drops 28%.
+                        </p>
+                    </div>
+
+                    <!-- Scenario Selector -->
+                    <div class="flex bg-stone-100 p-1 rounded-xl border border-stone-200 shrink-0 self-start">
+                        <button id="sim-btn-crash" onclick="setCrashMode('crash')"
+                            class="px-3.5 py-2 rounded-lg text-xs font-bold bg-rose-600 text-white shadow-2xs transition">
+                            📉 Year 3 Crash (-28%)
+                        </button>
+                        <button id="sim-btn-recovery" onclick="setCrashMode('recovery')"
+                            class="px-3.5 py-2 rounded-lg text-xs font-semibold text-stone-600 hover:text-stone-900 transition">
+                            🌱 Year 5 Recovery (+Sale Effect)
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Crash Snapshot Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="p-5 rounded-xl bg-stone-50 border border-stone-200">
+                        <span class="text-xs text-stone-500 font-medium">Money You Put In (36 Months)</span>
+                        <div id="crash-invested" class="font-serif-editorial text-2xl font-bold text-stone-900 mt-1">
+                            ₹1,80,000</div>
+                        <p class="text-xs text-stone-500 mt-1">36 monthly installments of <span
+                                class="crash-monthly-val">₹5,000</span></p>
+                    </div>
+
+                    <div id="crash-value-card" class="p-5 rounded-xl bg-rose-50 border border-rose-200">
+                        <span id="crash-value-label" class="text-xs text-rose-700 font-semibold">Portfolio Value Today
+                            (During Crash)</span>
+                        <div id="crash-current-val" class="font-serif-editorial text-2xl font-bold text-rose-900 mt-1">
+                            ₹1,54,200</div>
+                        <p id="crash-delta-text" class="text-xs text-rose-700 font-medium mt-1">Down ₹25,800 below what
+                            you put in!</p>
+                    </div>
+
+                    <div class="p-5 rounded-xl bg-teal-50 border border-teal-200">
+                        <span class="text-xs text-teal-800 font-semibold">Why You Didn't Lose Everything</span>
+                        <div id="crash-cushion-val" class="font-serif-editorial text-2xl font-bold text-teal-950 mt-1">
+                            ₹58,500 Safe</div>
+                        <p class="text-xs text-teal-800 mt-1">Your Emergency Cash & FD buckets didn't drop a single
+                            rupee.</p>
+                    </div>
+                </div>
+
+                <!-- Interactive Decision Fork: What Does Aarav Do Now? -->
+                <div class="pt-2">
+                    <h3 class="text-sm font-bold uppercase tracking-wider text-stone-500 mb-3">
+                        Choose How You React Today (Click to Compare):
+                    </h3>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                        <!-- Reaction A: Panic & Stop -->
+                        <div onclick="selectReaction('panic')" id="reaction-card-panic"
+                            class="cursor-pointer rounded-2xl border-2 border-stone-200 p-6 hover:border-rose-400 transition bg-white">
+                            <div class="flex items-center justify-between">
+                                <span
+                                    class="text-xs font-bold uppercase px-2.5 py-1 rounded bg-rose-100 text-rose-800">Option
+                                    A • What Most Beginners Do</span>
+                                <span class="text-xs text-stone-400">Click to inspect</span>
+                            </div>
+                            <h4 class="font-serif-editorial text-xl font-bold text-stone-900 mt-3">
+                                "Stop my SIP and move everything to a bank FD."
+                            </h4>
+                            <p class="text-sm text-stone-600 mt-2">
+                                It feels safe in the moment because the bleeding stops. Here is what it actually does to
+                                your Honest Million:
+                            </p>
+                            <ul class="mt-4 space-y-2 text-xs sm:text-sm text-stone-700">
+                                <li class="flex items-start gap-2">
+                                    <span class="text-rose-600 font-bold">✕</span>
+                                    <span><strong>You turn a temporary paper dip into a permanent loss</strong> by
+                                        selling when prices are cheap.</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-rose-600 font-bold">✕</span>
+                                    <span>Your ₹10 Lakh goal gets pushed back by <strong>3 Years & 4
+                                            Months</strong>.</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Reaction B: Stay the Course -->
+                        <div onclick="selectReaction('stay')" id="reaction-card-stay"
+                            class="cursor-pointer rounded-2xl border-2 border-teal-700 bg-teal-50/40 p-6 transition shadow-2xs">
+                            <div class="flex items-center justify-between">
+                                <span
+                                    class="text-xs font-bold uppercase px-2.5 py-1 rounded bg-teal-800 text-white">Option
+                                    B • The Honest Millionaire Move</span>
+                                <span class="text-xs text-teal-800 font-semibold">✓ Selected</span>
+                            </div>
+                            <h4 class="font-serif-editorial text-xl font-bold text-stone-900 mt-3">
+                                "Do nothing. Let my monthly SIP keep running."
+                            </h4>
+                            <p class="text-sm text-stone-700 mt-2">
+                                Why is a crash secretly great news for a 22-year-old who is still buying every month?
+                                Look at the math:
+                            </p>
+                            <div class="mt-4 p-3.5 rounded-xl bg-white border border-teal-200 text-xs space-y-2">
+                                <div class="flex justify-between text-stone-600">
+                                    <span>Before crash (Index price ₹100/unit):</span>
+                                    <strong class="text-stone-900">Your SIP bought 35 units/mo</strong>
+                                </div>
+                                <div class="flex justify-between text-teal-900 font-semibold">
+                                    <span>During -28% crash (Price ₹72/unit):</span>
+                                    <strong class="bg-teal-100 px-2 py-0.5 rounded">Your SAME SIP buys 48.6 units/mo
+                                        (+39% free!)</strong>
+                                </div>
+                            </div>
+                            <p class="text-xs text-teal-900 font-medium mt-3">
+                                💡 Because you accumulated 39% more units while the market was on sale, when prices
+                                recover you actually hit ₹10 Lakhs <strong>4 months ahead of schedule</strong>!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pt-4 border-t border-stone-100 flex justify-end">
+                    <button onclick="switchTab(4)"
+                        class="px-6 py-3 rounded-xl bg-teal-800 hover:bg-teal-900 text-white font-semibold text-sm transition shadow-sm">
+                        See How You'll Manage This Calmly Over Time →
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- STEP 4: MANAGE IT OVER TIME (ANTI-DASHBOARD)-->
+        <!-- ========================================== -->
+        <section id="step-4" class="hidden space-y-6">
+            <div class="max-w-3xl mx-auto space-y-6">
+
+                <!-- Header & Mood Switcher -->
+                <div class="bg-white border border-stone-200 rounded-2xl p-6 sm:p-8 shadow-2xs">
+                    <div
+                        class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-stone-100">
+                        <div>
+                            <span class="text-xs font-bold uppercase tracking-wider text-teal-700">Step 4 • Manage Over
+                                Time (Anti-Dashboard)</span>
+                            <h2 class="font-serif-editorial text-2xl font-bold text-stone-900 mt-1">
+                                No blinking red tickers. Just a 30-second monthly check-in.
+                            </h2>
+                            <p class="text-xs sm:text-sm text-stone-600 mt-1">
+                                Competing numbers make you trade too much. Once a month, after your SIP runs, this is
+                                the only screen you see.
+                            </p>
+                        </div>
+
+                        <!-- Toggle: Normal Month vs Dip Month -->
+                        <div class="flex bg-stone-100 p-1 rounded-xl border border-stone-200 shrink-0 self-start">
+                            <button id="checkin-calm-btn" onclick="setCheckinMood('calm')"
+                                class="px-3 py-1.5 rounded-lg text-xs font-bold bg-white text-stone-900 shadow-2xs">
+                                ☀️ Normal Month
+                            </button>
+                            <button id="checkin-dip-btn" onclick="setCheckinMood('dip')"
+                                class="px-3 py-1.5 rounded-lg text-xs font-medium text-stone-600">
+                                🌧️ Down Market Month
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- The Calm Narrative Card -->
+                    <div class="mt-6 space-y-6">
+                        <div id="checkin-status-banner" class="p-6 rounded-2xl bg-teal-950 text-amber-50 space-y-2">
+                            <div
+                                class="flex items-center justify-between text-xs text-teal-300 uppercase tracking-wider font-semibold">
+                                <span>Monthly Snapshot • 2 Years Into Your Plan</span>
+                                <span id="checkin-badge" class="px-2.5 py-0.5 rounded-full bg-teal-800 text-teal-200">On
+                                    Track</span>
+                            </div>
+                            <h3 id="checkin-headline"
+                                class="font-serif-editorial text-2xl sm:text-3xl font-bold leading-snug pt-1">
+                                You are 21% of the way to your Honest Million. Your target date is still December 2035.
+                            </h3>
+                            <p id="checkin-subtext" class="text-sm text-stone-300 leading-relaxed pt-1">
+                                Your ₹5,000 monthly plan ran automatically on the 5th. Indian companies had a quiet,
+                                positive month (+1.4%). You don't need to touch a thing.
+                            </p>
+                        </div>
+
+                        <!-- What You Actually Hold (Plain English, Zero Clutter) -->
+                        <div>
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-stone-400 mb-3">
+                                What You Own Today (In Plain English)
+                            </h4>
+
+                            <div class="space-y-3">
+                                <!-- Holding 1 -->
+                                <div
+                                    class="p-4 rounded-xl border border-stone-200 flex flex-col sm:flex-row sm:items-center justify-between gap-2 bg-stone-50/60">
+                                    <div>
+                                        <div class="text-sm font-bold text-stone-900">1. Your "Laptop Broke" Emergency
+                                            Cash</div>
+                                        <p class="text-xs text-stone-600">Held in instant-withdraw Liquid/Savings •
+                                            Never fluctuates</p>
+                                    </div>
+                                    <div class="sm:text-right">
+                                        <div id="hold-safe-val" class="text-base font-bold text-stone-900">₹12,600</div>
+                                        <span class="text-xs text-emerald-700 font-medium">Available in 30
+                                            seconds</span>
+                                    </div>
+                                </div>
+
+                                <!-- Holding 2 -->
+                                <div
+                                    class="p-4 rounded-xl border border-stone-200 flex flex-col sm:flex-row sm:items-center justify-between gap-2 bg-stone-50/60">
+                                    <div>
+                                        <div class="text-sm font-bold text-stone-900">2. Your Stability Cushion (FD &
+                                            Gold)</div>
+                                        <p class="text-xs text-stone-600">Steady 7% foundation • Protects your peace of
+                                            mind</p>
+                                    </div>
+                                    <div class="sm:text-right">
+                                        <div id="hold-mid-val" class="text-base font-bold text-stone-900">₹25,900</div>
+                                        <span class="text-xs text-stone-500">Up ₹1,900 from interest</span>
+                                    </div>
+                                </div>
+
+                                <!-- Holding 3 -->
+                                <div
+                                    class="p-4 rounded-xl border border-stone-200 flex flex-col sm:flex-row sm:items-center justify-between gap-2 bg-white">
+                                    <div>
+                                        <div class="text-sm font-bold text-stone-900">3. Your Millionaire Engine (Nifty
+                                            50 Index)</div>
+                                        <p id="hold-growth-desc" class="text-xs text-stone-600">You own <strong>842
+                                                units</strong> across India's top 50 companies (TCS, HDFC, Reliance...)
+                                        </p>
+                                    </div>
+                                    <div class="sm:text-right">
+                                        <div id="hold-growth-val" class="text-base font-bold text-teal-900">₹98,400
+                                        </div>
+                                        <span id="hold-growth-tag" class="text-xs text-teal-700 font-medium">+38.5 units
+                                            added this month</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Life Change Action Bar -->
+                        <div
+                            class="p-4 rounded-xl bg-amber-50/70 border border-amber-200/80 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+                            <div class="text-xs text-stone-700">
+                                <strong class="text-stone-900">Did life change?</strong> Got an internship stipend or
+                                have exam month expenses? Adjust your next month's SIP without breaking your plan.
+                            </div>
+                            <button onclick="switchTab(2)"
+                                class="text-xs font-bold text-teal-900 underline shrink-0 hover:text-teal-700">
+                                Adjust Monthly Split →
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        // =====================================================
+        // STEP 1 DATA & LOGIC: OPTIONS & AARAV FILTER
+        // =====================================================
+        const financialOptions = [
+            {
+                id: 'savings',
+                name: 'Savings Account / Liquid Fund',
+                bucket: 'Bucket 1 • Emergency Cash',
+                recommended: true,
+                returnRate: '3.5% – 6% / yr',
+                risk: 'Zero loss risk',
+                lockIn: 'None (Instant access)',
+                fees: '₹0 – 0.1%',
+                plainEnglish: 'Like cash in your pocket that earns a tiny trickle of interest. Won’t make you a millionaire, but stops you from borrowing when your phone screen cracks.',
+                verdict: 'Essential for your first ₹15k–₹20k safety net.'
+            },
+            {
+                id: 'fd_gold',
+                name: 'Fixed Deposits (FD) & Sovereign Gold',
+                bucket: 'Bucket 2 • Stability Cushion',
+                recommended: true,
+                returnRate: '6.5% – 8% / yr',
+                risk: 'Very Low',
+                lockIn: '1 to 5 Years (Penalty if broken early)',
+                fees: '₹0',
+                plainEnglish: 'Your bank locks your money and guarantees a fixed return. Keeps up with inflation and stays green when the stock market is having a meltdown.',
+                verdict: 'Great for money you need in 2–3 years (like post-grad fees).'
+            },
+            {
+                id: 'index_sip',
+                name: 'Nifty 50 Index Fund SIP',
+                bucket: 'Bucket 3 • Millionaire Engine',
+                recommended: true,
+                returnRate: '~11% – 13% / yr (Long-term avg)',
+                risk: 'Drops 15–30% in bad years',
+                lockIn: 'None (Requires 5+ yr patience)',
+                fees: 'Ultra-low (0.1% / yr)',
+                plainEnglish: 'Instead of guessing which stock will win, you automatically buy a tiny slice of India’s 50 biggest companies every month. If India grows over the next decade, you grow.',
+                verdict: 'Your #1 engine for turning ₹3,500/mo into ₹10 Lakhs.'
+            },
+            {
+                id: 'bonds',
+                name: 'Corporate Bonds',
+                bucket: 'Optional • Income Asset',
+                recommended: false,
+                returnRate: '8% – 10% / yr',
+                risk: 'Low-Medium (Company default risk)',
+                lockIn: '1 to 3 Years',
+                fees: '0.2% – 0.5%',
+                plainEnglish: 'You lend money directly to companies for slightly higher interest than an FD. Safe if it’s a top company, risky if they struggle to pay back.',
+                verdict: 'Skipped for now: An FD + Index Fund mix is simpler at ₹8,000/mo.'
+            },
+            {
+                id: 'active_mf',
+                name: 'Themed & "Star Manager" Mutual Funds',
+                bucket: 'High Fee Distraction',
+                recommended: false,
+                returnRate: 'Unpredictable',
+                risk: 'High',
+                lockIn: 'None (Exit load under 1 yr)',
+                fees: 'High (1.0% – 2.0% every year)',
+                plainEnglish: 'Experts charge you a hefty fee every year—even in years they lose your money—trying to beat the Nifty 50 Index. Over 10 years, over 75% of them fail to beat the simple Index.',
+                verdict: 'Skipped: Don’t let 1.5% annual fees silently eat ₹80,000 of your million.'
+            },
+            {
+                id: 'crypto_fno',
+                name: 'F&O Trading, Penny Stocks & Crypto Tips',
+                bucket: 'Social Media Trap',
+                recommended: false,
+                returnRate: '90% of retail traders lose money',
+                risk: 'Extreme (Can wipe out 100%)',
+                lockIn: 'None',
+                fees: 'Brokerage + 30% Tax + STT',
+                plainEnglish: 'Reels and hostel friends only show their one lucky win, never the 9 wipeouts. Per SEBI data, 9 out of 10 individual F&O traders lose money.',
+                verdict: 'Filtered out: Gambling is the fastest way to reset your ₹10L clock to zero.'
+            }
+        ];
+
+        let filterActive = true;
+
+        function renderOptions() {
+            const grid = document.getElementById('options-grid');
+            grid.innerHTML = '';
+
+            financialOptions.forEach(opt => {
+                const isDimmed = filterActive && !opt.recommended;
+                const card = document.createElement('div');
+                card.className = `card-transition rounded-2xl p-5 border flex flex-col justify-between ${opt.recommended
+                        ? 'bg-white border-teal-700/80 shadow-2xs'
+                        : isDimmed
+                            ? 'bg-stone-100/70 border-stone-200 opacity-60 hover:opacity-100'
+                            : 'bg-white border-stone-200'
+                    }`;
+
+                card.innerHTML = `
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-2">
+              <span class="text-[11px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full ${opt.recommended ? 'bg-teal-100 text-teal-900' : 'bg-stone-200 text-stone-700'
+                    }">
+                ${opt.bucket}
+              </span>
+              ${opt.recommended
+                        ? '<span class="text-xs font-bold text-teal-800">✓ In Your Plan</span>'
+                        : '<span class="text-xs font-medium text-stone-500">Filtered Out</span>'
+                    }
+            </div>
+
+            <h3 class="font-serif-editorial text-lg font-bold text-stone-900">${opt.name}</h3>
+            <p class="text-xs text-stone-600 mt-2 leading-relaxed">${opt.plainEnglish}</p>
+
+            <div class="mt-4 pt-3 border-t border-stone-100 grid grid-cols-2 gap-2 text-xs">
+              <div>
+                <span class="text-stone-400 block text-[11px]">Expected Return</span>
+                <strong class="text-stone-800">${opt.returnRate}</strong>
+              </div>
+              <div>
+                <span class="text-stone-400 block text-[11px]">Can It Lose Money?</span>
+                <strong class="${opt.id === 'index_sip' ? 'text-amber-700' : opt.recommended ? 'text-emerald-700' : 'text-rose-700'}">${opt.risk}</strong>
+              </div>
+              <div>
+                <span class="text-stone-400 block text-[11px]">Lock-In</span>
+                <strong class="text-stone-700">${opt.lockIn}</strong>
+              </div>
+              <div>
+                <span class="text-stone-400 block text-[11px]">Fees</span>
+                <strong class="text-stone-700">${opt.fees}</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-4 pt-3 border-t border-stone-200/60 text-xs font-semibold ${opt.recommended ? 'text-teal-900' : 'text-stone-600'
+                    }">
+            💡 ${opt.verdict}
+          </div>
+        `;
+                grid.appendChild(card);
+            });
+        }
+
+        function toggleAaravFilter() {
+            filterActive = !filterActive;
+            const btn = document.getElementById('filter-toggle');
+            const knob = document.getElementById('filter-knob');
+            const statusText = document.getElementById('filter-status-text');
+
+            if (filterActive) {
+                btn.className = 'relative inline-flex h-6 w-11 items-center rounded-full bg-teal-700 transition-colors';
+                knob.className = 'inline-block h-4 w-4 transform rounded-full bg-white transition-transform translate-x-6';
+                statusText.textContent = 'Showing all 6 options, with the 3 distractions dimmed & explained.';
+            } else {
+                btn.className = 'relative inline-flex h-6 w-11 items-center rounded-full bg-stone-400 transition-colors';
+                knob.className = 'inline-block h-4 w-4 transform rounded-full bg-white transition-transform translate-x-1';
+                statusText.textContent = 'Filter off: Viewing all raw options side-by-side.';
+            }
+            renderOptions();
+        }
+
+        // =====================================================
+        // STEP 2 LOGIC: REAL-TIME GOAL CALCULATOR & SLIDERS
+        // =====================================================
+        const TOTAL_INCOME = 8000;
+        const GOAL_AMOUNT = 1000000; // ₹10,00,000
+
+        function applyPreset(spend, safe, mid, growth) {
+            document.getElementById('slider-spend').value = spend;
+            document.getElementById('slider-safe').value = safe;
+            document.getElementById('slider-mid').value = mid;
+            document.getElementById('slider-growth').value = growth;
+            updatePlanMath();
+        }
+
+        function rebalanceSliders(changedBucket) {
+            const spend = parseInt(document.getElementById('slider-spend').value);
+            const investable = TOTAL_INCOME - spend;
+
+            let safe = parseInt(document.getElementById('slider-safe').value);
+            let mid = parseInt(document.getElementById('slider-mid').value);
+            let growth = parseInt(document.getElementById('slider-growth').value);
+
+            if (changedBucket === 'safe') {
+                if (safe > investable) safe = investable;
+                const rem = investable - safe;
+                mid = Math.min(mid, rem);
+                growth = rem - mid;
+            } else if (changedBucket === 'mid') {
+                if (mid > investable) mid = investable;
+                const rem = investable - mid;
+                safe = Math.min(safe, rem);
+                growth = rem - safe;
+            } else if (changedBucket === 'growth') {
+                if (growth > investable) growth = investable;
+                const rem = investable - growth;
+                safe = Math.min(safe, Math.round(rem / 3 / 250) * 250);
+                mid = rem - safe;
+            }
+
+            document.getElementById('slider-safe').value = safe;
+            document.getElementById('slider-mid').value = mid;
+            document.getElementById('slider-growth').value = growth;
+            updatePlanMath();
+        }
+
+        function calculateMonthsToGoal(monthlySafe, monthlyMid, monthlyGrowth) {
+            const totalMonthly = monthlySafe + monthlyMid + monthlyGrowth;
+            if (totalMonthly <= 0) return 999;
+
+            const rSafe = 0.04 / 12;
+            const rMid = 0.07 / 12;
+            const rGrowth = 0.12 / 12;
+
+            let balSafe = 0, balMid = 0, balGrowth = 0;
+            let months = 0;
+
+            while ((balSafe + balMid + balGrowth) < GOAL_AMOUNT && months < 600) {
+                balSafe = balSafe * (1 + rSafe) + monthlySafe;
+                balMid = balMid * (1 + rMid) + monthlyMid;
+                balGrowth = balGrowth * (1 + rGrowth) + monthlyGrowth;
+                months++;
+            }
+            return months;
+        }
+
+        function updatePlanMath() {
+            const spend = parseInt(document.getElementById('slider-spend').value);
+            const investable = TOTAL_INCOME - spend;
+
+            let safe = parseInt(document.getElementById('slider-safe').value);
+            let mid = parseInt(document.getElementById('slider-mid').value);
+            let growth = parseInt(document.getElementById('slider-growth').value);
+
+            // Ensure sum matches investable when spend slider moves
+            const currentSum = safe + mid + growth;
+            if (currentSum !== investable) {
+                const diff = investable - currentSum;
+                growth = Math.max(0, growth + diff);
+                if (safe + mid + growth !== investable) {
+                    mid = Math.max(0, investable - safe - growth);
+                    safe = Math.max(0, investable - mid - growth);
+                }
+                document.getElementById('slider-safe').value = safe;
+                document.getElementById('slider-mid').value = mid;
+                document.getElementById('slider-growth').value = growth;
+            }
+
+            // Update max bounds on bucket sliders
+            ['slider-safe', 'slider-mid', 'slider-growth'].forEach(id => {
+                document.getElementById(id).max = investable;
+            });
+
+            // Update UI labels
+            document.getElementById('val-spend').textContent = `₹${spend.toLocaleString('en-IN')} / mo`;
+            document.getElementById('val-total-invest').textContent = `₹${investable.toLocaleString('en-IN')} / month`;
+            document.getElementById('val-safe').textContent = `₹${safe.toLocaleString('en-IN')} / mo`;
+            document.getElementById('val-mid').textContent = `₹${mid.toLocaleString('en-IN')} / mo`;
+            document.getElementById('val-growth').textContent = `₹${growth.toLocaleString('en-IN')} / mo`;
+
+            // Calculate months to ₹10L
+            const monthsYourMix = calculateMonthsToGoal(safe, mid, growth);
+            const monthsBankOnly = calculateMonthsToGoal(investable, 0, 0);
+
+            const yrs = Math.floor(monthsYourMix / 12);
+            const mos = monthsYourMix % 12;
+
+            document.getElementById('goal-time-headline').textContent =
+                mos > 0 ? `${yrs} Years, ${mos} Months` : `${yrs} Years`;
+
+            const targetYear = 2026 + yrs + (10 + mos > 12 ? 1 : 0);
+            const targetAge = 19 + yrs;
+            document.getElementById('goal-age-subtext').textContent =
+                `Target Year: ${targetYear} (When you are ${targetAge} years old)`;
+
+            // Blended rate
+            const blended = investable > 0
+                ? ((safe * 4 + mid * 7 + growth * 12) / investable).toFixed(1)
+                : '0.0';
+            document.getElementById('blended-rate-text').textContent = `${blended}%`;
+
+            const yourYrsFloat = (monthsYourMix / 12).toFixed(1);
+            const bankYrsFloat = (monthsBankOnly / 12).toFixed(1);
+            document.getElementById('bar-your-years').textContent = `${yourYrsFloat} yrs`;
+            document.getElementById('bar-bank-years').textContent = `${bankYrsFloat} yrs`;
+
+            const maxBarMonths = Math.max(monthsBankOnly, 240);
+            document.getElementById('bar-your-width').style.width = `${Math.min(100, Math.round((monthsYourMix / maxBarMonths) * 100))}%`;
+            document.getElementById('bar-bank-width').style.width = `${Math.min(100, Math.round((monthsBankOnly / maxBarMonths) * 100))}%`;
+
+            const monthsSaved = Math.max(0, monthsBankOnly - monthsYourMix);
+            const savedYrs = Math.floor(monthsSaved / 12);
+            const savedMos = monthsSaved % 12;
+            const totalPutIn = monthsYourMix * investable;
+            const compoundingGain = Math.max(0, GOAL_AMOUNT - totalPutIn);
+
+            document.getElementById('time-saved-callout').innerHTML =
+                monthsSaved > 3
+                    ? `With this mix, you reach ₹10 Lakhs <strong>${savedYrs} yrs & ${savedMos} mos earlier</strong> than leaving it in a bank account—and <strong>₹${(compoundingGain / 100000).toFixed(2)} Lakhs</strong> of your million comes purely from compounding!`
+                    : `You have nearly everything in low-return safe buckets. It keeps your balance steady, but forces you to wait <strong>${yourYrsFloat} years</strong> to hit ₹10 Lakhs.`;
+
+            // Update Honest Catch Warning
+            const growthShare = investable > 0 ? Math.round((growth / investable) * 100) : 0;
+            const catchEl = document.getElementById('honest-catch-text');
+            if (growthShare >= 50) {
+                catchEl.innerHTML = `Because <strong>${growthShare}%</strong> of your plan is in the Nifty 50 Index, in a bad market crash year your portfolio can temporarily drop by <strong>₹25,000–₹40,000 on paper</strong>. Meanwhile, your ₹${safe}/mo emergency cash ensures you never have to sell at a loss.`;
+            } else if (growthShare > 0) {
+                catchEl.innerHTML = `Only <strong>${growthShare}%</strong> of your money is in the Millionaire Engine. Your ride will feel very smooth, but inflation will eat into your speed.`;
+            } else {
+                catchEl.innerHTML = `With ₹0 in the Index SIP, you have zero stock market risk—but you are working 4+ extra years to reach the exact same ₹10 Lakh goal.`;
+            }
+
+            // Sync Step 3 & Step 4 numbers with Aarav's actual slider choices
+            syncCrashAndCheckinWithPlan(investable, safe, mid, growth);
+        }
+
+        // =====================================================
+        // STEP 3 & 4 DYNAMIC SYNC
+        // =====================================================
+        let currentCrashMode = 'crash';
+
+        function syncCrashAndCheckinWithPlan(investable, safe, mid, growth) {
+            const total36Mo = investable * 36;
+            const safeAndMid36 = (safe + mid) * 38.5; // With interest
+            const growthPutIn = growth * 36;
+            const crashedGrowthVal = Math.round(growthPutIn * 1.12 * 0.72);
+            const totalCrashedVal = Math.round(safeAndMid36 + crashedGrowthVal);
+            const diff = total36Mo - totalCrashedVal;
+
+            document.querySelectorAll('.crash-monthly-val').forEach(el => {
+                el.textContent = `₹${investable.toLocaleString('en-IN')}`;
+            });
+            document.getElementById('crash-invested').textContent = `₹${total36Mo.toLocaleString('en-IN')}`;
+            document.getElementById('crash-cushion-val').textContent = `₹${Math.round(safeAndMid36).toLocaleString('en-IN')} Safe`;
+
+            if (currentCrashMode === 'crash') {
+                document.getElementById('crash-value-label').textContent = 'Portfolio Value Today (During -28% Crash)';
+                document.getElementById('crash-current-val').textContent = `₹${totalCrashedVal.toLocaleString('en-IN')}`;
+                document.getElementById('crash-delta-text').textContent =
+                    diff > 0
+                        ? `Down ₹${diff.toLocaleString('en-IN')} below what you put in!`
+                        : `Still up ₹${Math.abs(diff).toLocaleString('en-IN')} thanks to safe buckets!`;
+            } else {
+                const recoveredVal = Math.round(total36Mo * 1.34);
+                document.getElementById('crash-value-label').textContent = 'Portfolio After Recovery (Discount Units Rebound)';
+                document.getElementById('crash-current-val').textContent = `₹${recoveredVal.toLocaleString('en-IN')}`;
+                document.getElementById('crash-delta-text').textContent =
+                    `Up +₹${(recoveredVal - total36Mo).toLocaleString('en-IN')} profit because you kept buying during the crash!`;
+            }
+
+            // Sync Step 4 (24 Months in)
+            document.getElementById('hold-safe-val').textContent = `₹${Math.round(safe * 25.2).toLocaleString('en-IN')}`;
+            document.getElementById('hold-mid-val').textContent = `₹${Math.round(mid * 25.8).toLocaleString('en-IN')}`;
+            document.getElementById('hold-growth-val').textContent = `₹${Math.round(growth * 28.1).toLocaleString('en-IN')}`;
+        }
+
+        function setCrashMode(mode) {
+            currentCrashMode = mode;
+            const crashBtn = document.getElementById('sim-btn-crash');
+            const recBtn = document.getElementById('sim-btn-recovery');
+            const card = document.getElementById('crash-value-card');
+
+            if (mode === 'crash') {
+                crashBtn.className = 'px-3.5 py-2 rounded-lg text-xs font-bold bg-rose-600 text-white shadow-2xs transition';
+                recBtn.className = 'px-3.5 py-2 rounded-lg text-xs font-semibold text-stone-600 hover:text-stone-900 transition';
+                card.className = 'p-5 rounded-xl bg-rose-50 border border-rose-200';
+            } else {
+                recBtn.className = 'px-3.5 py-2 rounded-lg text-xs font-bold bg-emerald-700 text-white shadow-2xs transition';
+                crashBtn.className = 'px-3.5 py-2 rounded-lg text-xs font-semibold text-stone-600 hover:text-stone-900 transition';
+                card.className = 'p-5 rounded-xl bg-emerald-50 border border-emerald-200';
+            }
+            updatePlanMath();
+        }
+
+        function selectReaction(choice) {
+            const panicCard = document.getElementById('reaction-card-panic');
+            const stayCard = document.getElementById('reaction-card-stay');
+
+            if (choice === 'panic') {
+                panicCard.className = 'cursor-pointer rounded-2xl border-2 border-rose-600 bg-rose-50/40 p-6 transition shadow-2xs';
+                stayCard.className = 'cursor-pointer rounded-2xl border-2 border-stone-200 bg-white p-6 transition';
+            } else {
+                stayCard.className = 'cursor-pointer rounded-2xl border-2 border-teal-700 bg-teal-50/40 p-6 transition shadow-2xs';
+                panicCard.className = 'cursor-pointer rounded-2xl border-2 border-stone-200 bg-white p-6 transition';
+            }
+        }
+
+        function setCheckinMood(mood) {
+            const calmBtn = document.getElementById('checkin-calm-btn');
+            const dipBtn = document.getElementById('checkin-dip-btn');
+            const banner = document.getElementById('checkin-status-banner');
+            const badge = document.getElementById('checkin-badge');
+            const headline = document.getElementById('checkin-headline');
+            const subtext = document.getElementById('checkin-subtext');
+            const growthTag = document.getElementById('hold-growth-tag');
+
+            if (mood === 'calm') {
+                calmBtn.className = 'px-3 py-1.5 rounded-lg text-xs font-bold bg-white text-stone-900 shadow-2xs';
+                dipBtn.className = 'px-3 py-1.5 rounded-lg text-xs font-medium text-stone-600';
+                banner.className = 'p-6 rounded-2xl bg-teal-950 text-amber-50 space-y-2 transition-colors';
+                badge.textContent = 'On Track';
+                badge.className = 'px-2.5 py-0.5 rounded-full bg-teal-800 text-teal-200';
+                headline.textContent = 'You are 21% of the way to your Honest Million. Your target date hasn’t moved.';
+                subtext.textContent = 'Your monthly SIP ran automatically on the 5th. Indian companies had a quiet, positive month (+1.4%). Go focus on college—nothing needs your attention.';
+                growthTag.textContent = '+38.5 units added this month';
+            } else {
+                dipBtn.className = 'px-3 py-1.5 rounded-lg text-xs font-bold bg-white text-stone-900 shadow-2xs';
+                calmBtn.className = 'px-3 py-1.5 rounded-lg text-xs font-medium text-stone-600';
+                banner.className = 'p-6 rounded-2xl bg-stone-900 text-amber-50 space-y-2 transition-colors';
+                badge.textContent = 'Market Dip = Units on Sale';
+                badge.className = 'px-2.5 py-0.5 rounded-full bg-amber-500/20 text-amber-300';
+                headline.textContent = 'The market dipped 6% this month. Your 2035 goal date is still completely intact.';
+                subtext.textContent = 'Because stock prices were lower on the 5th, your automatic SIP quietly bought 41.2 units instead of 38.5 units. Your Emergency Cash & FD are untouched.';
+                growthTag.textContent = '+41.2 units bought at a 6% discount!';
+            }
+        }
+
+        // =====================================================
+        // TAB NAVIGATION
+        // =====================================================
+        function switchTab(stepNum) {
+            [1, 2, 3, 4].forEach(n => {
+                const sec = document.getElementById(`step-${n}`);
+                const btn = document.getElementById(`tab-btn-${n}`);
+                if (n === stepNum) {
+                    sec.classList.remove('hidden');
+                    btn.className = 'tab-btn py-3 px-4 text-sm font-semibold border-b-2 border-teal-800 text-teal-900 whitespace-nowrap flex items-center gap-2';
+                } else {
+                    sec.classList.add('hidden');
+                    btn.className = 'tab-btn py-3 px-4 text-sm font-medium border-b-2 border-transparent text-stone-500 hover:text-stone-800 whitespace-nowrap flex items-center gap-2';
+                }
+            });
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Initialize on load
+        renderOptions();
+        updatePlanMath();
+    </script>
+</body>
+
+</html>
