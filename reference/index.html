@@ -356,4 +356,34 @@ const W=640,H=330,L=64,RR=14,T=16,B=32,mx=Math.max(0,...s.map(x=>x.p))*1.15||1,m
 X=i=>L+i/(n-1)*(W-L-RR),Y=p=>T+(mx-p)/(mx-mn)*(H-T-B),z=Y(0),pts=s.map((x,i)=>[X(i),Y(x.p)]),ln=sm(pts),
 area=`M${X(0)},${z} L${pts[0][0]},${pts[0][1]}`+ln.slice(ln.indexOf(" C"))+` L${X(n-1)},${z}Z`,st=Math.ceil(n/6);
 $("#plChart").innerHTML=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Profit and loss over time"><defs><linearGradient id="gp" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2f5bea" stop-opacity=".5"/><stop offset="1" stop-color="#2f5bea" stop-opacity=".05"/></linearGradient><clipPath id="ca"><rect x="0" y="0" width="${W}" height="${z}"/></clipPath><clipPath id="cb"><rect x="0" y="${z}" width="${W}" height="${H}"/></clipPath></defs>
-${Array.from({length:5},(_,k)=>mn+(mx-mn)*k/4).map(v=>`<line x1="${L}" x2="${W-RR}" y1="${Y(v)}" y2="${Y(v)}" stroke="#d9e3f7"/><text x="${L-8}" y="${Y(v)+4}" font-size="11" text-anchor="end"
+${Array.from({length:5},(_,k)=>mn+(mx-mn)*k/4).map(v=>`<line x1="${L}" x2="${W-RR}" y1="${Y(v)}" y2="${Y(v)}" stroke="#d9e3f7"/><text x="${L-8}" y="${Y(v)+4}" font-size="11" text-anchor="end" fill="#50648c">${fk(v)}</text>`).join("")}
+<path d="${area}" fill="url(#gp)" clip-path="url(#ca)"/><path d="${area}" fill="rgba(47,91,234,.22)" clip-path="url(#cb)"/>
+<line x1="${L}" x2="${W-RR}" y1="${z}" y2="${z}" stroke="#0a1d58" stroke-dasharray="5 4"/>
+<text x="${L+6}" y="${z-6}" font-size="11" fill="#0a1d58">${tr("Profit")}</text>${mn<0?`<text x="${L+6}" y="${z+14}" font-size="11" fill="#0a1d58">${tr("Loss")}</text>`:""}
+<path d="${ln}" fill="none" stroke="#1e40af" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+${s.map((x,i)=>i%st===0?`<text x="${X(i)}" y="${H-8}" font-size="11" text-anchor="middle" fill="#50648c">${x.d.slice(0,3)} ${x.d.slice(-2)}</text>`:"").join("")}
+<line id="gl" y1="${T}" y2="${H-B}" stroke="#1e40af" stroke-opacity=".4"/><circle id="gd" r="5.5" fill="#1e40af" stroke="#fff" stroke-width="2"/></svg><div class="tip" id="tip"></div>`;
+const box=$("#plChart"),svg=box.firstElementChild;
+const pt=i=>{const x=s[i],gl=$("#gl"),gd=$("#gd"),tp2=$("#tip");gl.setAttribute("x1",X(i));gl.setAttribute("x2",X(i));gd.setAttribute("cx",X(i));gd.setAttribute("cy",Y(x.p));
+tp2.style.left=(X(i)/W*100)+"%";tp2.style.top=(Y(x.p)/H*100)+"%";tp2.innerHTML=`<b>${sgn(x.p)}</b>${tr(x.p>=0?"Profit":"Loss")} · ${x.d}`};
+box.onpointermove=box.onpointerdown=e=>{const r=svg.getBoundingClientRect(),x=(e.clientX-r.left)/r.width*W;pt(Math.max(0,Math.min(n-1,Math.round((x-L)/(W-L-RR)*(n-1)))))};pt(n-1);
+$("#gainers").innerHTML=CO.slice(0,5).map(c=>`<div class="g"><span class="av" style="background:${c[2]}">${c[1].slice(0,2)}</span><span><b>${c[0]}</b><br><span class="muted">${inr(tp*c[3])} <span class="up">▲ ${c[4]}%</span></span></span></div>`).join("");
+let a=-Math.PI/2;const P=(r,t)=>[110+r*Math.cos(t),110+r*Math.sin(t)];
+const arcs=tp?CO.map((c,i)=>{const a1=a+c[3]*2*Math.PI,m=(a+a1)/2,bg=c[3]>.5?1:0,p=`M${P(100,a)} A100,100 0 ${bg} 1 ${P(100,a1-.012)} L${P(62,a1-.012)} A62,62 0 ${bg} 0 ${P(62,a)} Z`;a=a1;return `<path d="${p}" fill="${c[2]}" data-k="${i}" style="--dx:${(Math.cos(m)*9).toFixed(1)}px;--dy:${(Math.sin(m)*9).toFixed(1)}px"/>`}).join(""):"";
+$("#pie").innerHTML=`<svg viewBox="0 0 220 220" role="img" aria-label="Profit by company">${arcs}<text id="pc1" x="110" y="108" text-anchor="middle" font-size="19" font-weight="600" fill="#0a1633">${tp?inr(tp):"—"}</text><text id="pc2" x="110" y="128" text-anchor="middle" font-size="11" fill="#50648c">${tr("Total profit")}</text></svg>`;
+const ps=$("#pie svg"),setC=k=>{const c=CO[k];$("#pc1").textContent=inr(tp*c[3]);$("#pc2").textContent=c[0].split(" (")[0]+" · "+Math.round(c[3]*100)+"%"};
+ps.onpointerover=e=>{const p=e.target.closest("path[data-k]");if(p)setC(+p.dataset.k)};ps.onpointerleave=()=>{$("#pc1").textContent=tp?inr(tp):"—";$("#pc2").textContent=tr("Total profit")};
+$("#pieList").innerHTML=CO.map(c=>`<div class="drow"><span class="dot" style="background:${c[2]}"></span><span>${c[0]}<small>${Math.round(c[3]*100)}%</small></span><strong>${inr(tp*c[3])}</strong></div>`).join("");
+const ix=[0,1,2,3].sort((a,b)=>S.w[b]-S.w[a]);
+$("#distBar").innerHTML=ix.filter(i=>S.w[i]>0).map(i=>`<i style="flex:${S.w[i]};background:repeating-linear-gradient(90deg,${DC[i]} 0 3px,${DC[i]}b3 3px 4px)" title="${tr(N[i])}"></i>`).join("");
+$("#distList").innerHTML=ix.map(i=>`<div class="drow"><span class="dot" style="background:${DC[i]}"></span><span>${tr(N[i])}<small>${S.w[i]}%</small></span><strong>${inr(last.v*S.w[i]/100)}</strong></div>`).join("")}
+$("#rangeChips").onclick=e=>{const b=e.target.closest("[data-r]");if(b){rng=+b.dataset.r;investRender()}};
+function applyLang(){$$("[data-i]").forEach(e=>{e.dataset.en=e.dataset.en||e.textContent;e.textContent=tr(e.dataset.en)});$("#langBtn").textContent=S.lang==="hi"?"🌐 हिन्दी":"🌐 English";document.documentElement.lang=S.lang;investRender()}
+$("#langBtn").onclick=()=>{S.lang=S.lang==="hi"?"en":"hi";applyLang();save()};
+render(false);applyLang();show(location.hash.slice(1)||"home");
+</script>
+<script src="chatbot.js"></script>
+<script src="theme.js"></script>
+<script src="goal-popups.js"></script>
+</body>
+</html>
